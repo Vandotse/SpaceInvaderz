@@ -2,12 +2,10 @@ using UnityEngine;
 
 [ExecuteAlways]
 public class EarthAnchorAndRotate : MonoBehaviour {
-  [Header("Screen Placement")]
-  [Range(-0.3f, 1.3f)] public float viewportX = 0.5f;  // allow overscan, if needed
-  [Range(-0.3f, 1.3f)] public float viewportY = -0.23f; // <— start slightly below bottom
+  [Range(-0.3f, 1.3f)] public float viewportX = 0.5f;
+  [Range(-0.3f, 1.3f)] public float viewportY = -0.23f;
   public float groundY = 0f;
 
-  [Header("Sync with Streamer")]
   public TerrainStreamer streamer;
   public float degreesPerUnit = 2f;
   public bool rotateContinuously = true;

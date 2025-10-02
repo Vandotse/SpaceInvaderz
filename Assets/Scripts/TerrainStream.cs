@@ -3,23 +3,18 @@ using UnityEngine;
 
 public class TerrainStreamer : MonoBehaviour
 {
-  [Header("Tile Setup")]
   public GameObject tilePrefab;
   public Transform origin;
   public float tileLength = 10f;
 
-  [Header("Streaming & Motion")]
-  public Vector3 axis = new Vector3(0, 0, 1); // scroll "up" the screen
+  public Vector3 axis = new Vector3(0, 0, 1);
   public float speed = 2f;
 
-  [Header("Coverage")]
   public int tilesAhead = 8;
   public int tilesBehind = 2;
 
-  [Header("Positioning")]
-  public Vector3 positionOffset = new Vector3(0, -2f, 0); // Offset to start planes lower
+  public Vector3 positionOffset = new Vector3(0, -2f, 0);
 
-  [Header("Pooling")]
   public int poolSize = 10;
 
   public float ScrollDistance { get; private set; }

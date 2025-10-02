@@ -4,7 +4,6 @@ using UnityEngine;
 public class AnchorToViewport : MonoBehaviour {
   [Range(0f,1f)] public float viewportX = 0.5f;
   [Range(0f,1f)] public float viewportY = 0.2f;
-  [Tooltip("World Y of your ground (usually 0).")]
   public float groundY = 0f;
 
   void LateUpdate() {
