@@ -71,31 +71,5 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 100000, guid: b82e0d2b8cc9ee64cacfa0b6e51ff1a3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5031108093761927327}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b82e0d2b8cc9ee64cacfa0b6e51ff1a3, type: 3}
---- !u!1 &8527226548391139849 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100000, guid: b82e0d2b8cc9ee64cacfa0b6e51ff1a3, type: 3}
-  m_PrefabInstance: {fileID: 8527226548391238825}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &5031108093761927327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8527226548391139849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b1d72bca011a436db4803c943176a6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EarthAnchorAndRotate
-  viewportX: 0.5
-  viewportY: -0.23
-  groundY: -3
-  streamer: {fileID: 0}
-  degreesPerUnit: 4
-  rotateContinuously: 1

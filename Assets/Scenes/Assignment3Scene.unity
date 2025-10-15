@@ -424,19 +424,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2054096835}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28256472940924e28960890d6e29cc79, type: 3}
+  m_Script: {fileID: 11500000, guid: 66e6c9aac7bf84e2ea381e0488afe993, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TerrainStreamer
+  m_EditorClassIdentifier: Assembly-CSharp::SuperSimpleGroundScroller
   tilePrefab: {fileID: 795691308694454696, guid: 7bd554b66c4c146ff981b2df509d1463, type: 3}
-  origin: {fileID: 0}
-  tileLength: 10
-  axis: {x: 0, y: 0, z: 1}
-  speed: 2
-  tilesAhead: 8
-  tilesBehind: 2
-  positionOffset: {x: 0, y: -2, z: 0}
-  poolSize: 10
-  edgeBleed: 0.002
+  tileWidth: 5
+  visibleTiles: 8
+  scrollSpeed: 3
+  groundY: -3.5
 --- !u!1001 &8410301874245505760
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -448,7 +443,7 @@ PrefabInstance:
     - target: {fileID: 5031108093761927327, guid: 8ff4d6fb73e584fe7aef3018074f2898, type: 3}
       propertyPath: streamer
       value: 
-      objectReference: {fileID: 2054096838}
+      objectReference: {fileID: 0}
     - target: {fileID: 8527226548391139849, guid: 8ff4d6fb73e584fe7aef3018074f2898, type: 3}
       propertyPath: m_Name
       value: Planet16128Tris
@@ -496,8 +491,28 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8527226548391139849, guid: 8ff4d6fb73e584fe7aef3018074f2898, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8410301874245505762}
   m_SourcePrefab: {fileID: 100100000, guid: 8ff4d6fb73e584fe7aef3018074f2898, type: 3}
+--- !u!1 &8410301874245505761 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8527226548391139849, guid: 8ff4d6fb73e584fe7aef3018074f2898, type: 3}
+  m_PrefabInstance: {fileID: 8410301874245505760}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8410301874245505762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8410301874245505761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bca37a9527127422487e575ab2531082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::rotate
 --- !u!1001 &8967819179326578162
 PrefabInstance:
   m_ObjectHideFlags: 0
