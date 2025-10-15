@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class SuperSimpleGroundScroller : MonoBehaviour
+public class terraingenerator : MonoBehaviour
 {
     public GameObject tilePrefab;
     public float tileWidth = 5f;
