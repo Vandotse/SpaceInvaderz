@@ -10,6 +10,7 @@ public class PlayerControler : MonoBehaviour
     public GameObject BulletPrefab;
     public GameObject BeamPrefab;
     public float primaryDelay = 0.25f;
+    public float fixedY = 2.0f;
     
     private bool primaryDown = false;
     private float primaryNextTime = 0f;
@@ -28,12 +29,16 @@ public class PlayerControler : MonoBehaviour
     void Update()
     {
         Vector2 move = Move.action.ReadValue<Vector2>();
-        transform.position += new Vector3(move.x * moveSpeed, 0, move.y * moveSpeed);
+        Vector3 p = transform.position;
+        p += new Vector3(move.x * moveSpeed, 0f, move.y * moveSpeed);
 
-        Vector3 pos = cam.WorldToViewportPoint(transform.position);
-        pos.x = Mathf.Clamp01(pos.x);
-        pos.y = Mathf.Clamp01(pos.y);
-        transform.position = cam.ViewportToWorldPoint(pos);
+        Vector3 vp = cam.WorldToViewportPoint(p);
+        vp.x = Mathf.Clamp01(vp.x);
+        vp.y = Mathf.Clamp01(vp.y);
+
+        Vector3 clamped = cam.ViewportToWorldPoint(new Vector3(vp.x, vp.y, vp.z));
+        clamped.y = fixedY;
+        transform.position = clamped;
 
         if (primaryDown == true && Time.time >= primaryNextTime) {
             float spawnDistance = 1f;
@@ -116,5 +121,13 @@ public class PlayerControler : MonoBehaviour
                 Destroy(child.gameObject);
 
         beamActive = false;
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.CompareTag("Enemy"))
+        {
+            Time.timeScale = 0f;
+        }
     }
 }
