@@ -740,10 +740,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::asteroidSpawner
   asteroidPrefabs:
-  - {fileID: 3115016060725414386, guid: e1fb72ac2bf6d42d480a5242fbdac6d5, type: 3}
-  - {fileID: 2164281178158525392, guid: 304cb16ae753a44ab862afae0bf794a4, type: 3}
   - {fileID: 2050131545081866563, guid: 935debf8f1ec54708b8ceb54b481807e, type: 3}
-  spawnInterval: 2
+  spawnInterval: 0.75
   fallSpeed: 3
   spawnZOffset: 0.2
 --- !u!4 &2019527141

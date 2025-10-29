@@ -11,6 +11,8 @@ public class PlayerControler : MonoBehaviour
     public GameObject BeamPrefab;
     public float primaryDelay = 0.25f;
     public float fixedY = 2.0f;
+    public AudioManager AudioManager;
+
     
     private bool primaryDown = false;
     private float primaryNextTime = 0f;
@@ -30,7 +32,7 @@ public class PlayerControler : MonoBehaviour
     {
         Vector2 move = Move.action.ReadValue<Vector2>();
         Vector3 p = transform.position;
-        p += new Vector3(move.x * moveSpeed, 0f, move.y * moveSpeed);
+        p += new Vector3(move.x * moveSpeed * Time.timeScale, 0f, move.y * moveSpeed * Time.timeScale);
 
         Vector3 vp = cam.WorldToViewportPoint(p);
         vp.x = Mathf.Clamp01(vp.x);
@@ -46,6 +48,7 @@ public class PlayerControler : MonoBehaviour
             Vector3 spawnPos = transform.position + transform.forward * spawnDistance;
 
             Instantiate(BulletPrefab, spawnPos, BulletPrefab.transform.rotation);
+            AudioManager.Play(AudioManager.Attack);
 
             primaryNextTime = Time.time + primaryDelay;
         }
@@ -127,6 +130,7 @@ public class PlayerControler : MonoBehaviour
     {
         if (collision.collider.CompareTag("Enemy"))
         {
+            AudioManager.Play(AudioManager.PlayerHit);
             Time.timeScale = 0f;
         }
     }
