@@ -3,7 +3,7 @@ using UnityEngine;
 public class asteroidSpawner : MonoBehaviour
 {
     public GameObject[] asteroidPrefabs;
-    public float spawnInterval = 2f;
+    public float baseSpawnInterval = 2f;
     public float fallSpeed = 3f;
     public float spawnZOffset = 0.2f;
 
@@ -17,8 +17,14 @@ public class asteroidSpawner : MonoBehaviour
 
     void Update()
     {
+        float currentSpawnInterval = baseSpawnInterval;
+        if (GameManager.Instance != null)
+        {
+            currentSpawnInterval = GameManager.Instance.GetCurrentSpawnInterval();
+        }
+
         timer += Time.deltaTime;
-        if (timer < spawnInterval) return;
+        if (timer < currentSpawnInterval) return;
         timer = 0f;
 
         if (asteroidPrefabs == null || asteroidPrefabs.Length == 0) return;

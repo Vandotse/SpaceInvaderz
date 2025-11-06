@@ -27,19 +27,31 @@ public class asteroidMove : MonoBehaviour
         {
             audioManager.Play(audioManager.Explosion);
             Destroy(collision.collider.gameObject);
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.AsteroidDestroyed();
+            }
             Destroy(gameObject);
         }
 
         if (collision.collider.CompareTag("Beam"))
         {
             audioManager.Play(audioManager.Explosion);
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.AsteroidDestroyed();
+            }
             Destroy(gameObject);
         }
 
         if (collision.collider.CompareTag("Player"))
         {
             audioManager.Play(audioManager.PlayerHit);
-            Time.timeScale = 0f;
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.PlayerHit();
+            }
+            Destroy(gameObject);
         }
     }
 }

@@ -131,7 +131,10 @@ public class PlayerControler : MonoBehaviour
         if (collision.collider.CompareTag("Enemy"))
         {
             AudioManager.Play(AudioManager.PlayerHit);
-            Time.timeScale = 0f;
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.PlayerHit();
+            }
         }
     }
 }
