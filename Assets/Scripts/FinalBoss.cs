@@ -76,6 +76,7 @@ public class FinalBoss : MonoBehaviour
         PlayerInfo.GameLoopCount = Mathf.Max(1, PlayerInfo.GameLoopCount + 1);
         PlayerInfo.Clear();
         PlayerInfo.ForceFreshStart = true;
+        PlayerInfo.AutoStartNextRun = true;
 
         if (GameSceneManager.Instance != null)
         {

@@ -32,7 +32,8 @@ public class PlayerControler : MonoBehaviour
     {
         Vector2 move = Move.action.ReadValue<Vector2>();
         Vector3 p = transform.position;
-        p += new Vector3(move.x * moveSpeed * Time.timeScale, 0f, move.y * moveSpeed * Time.timeScale);
+        float dt = Time.deltaTime;
+        p += new Vector3(move.x * moveSpeed * dt, 0f, move.y * moveSpeed * dt);
 
         Vector3 vp = cam.WorldToViewportPoint(p);
         vp.x = Mathf.Clamp01(vp.x);

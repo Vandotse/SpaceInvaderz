@@ -11,6 +11,7 @@ public static class PlayerInfo
     public static bool ForceFreshStart = false;
     public static float StoredGameTime = 0f;
     public static int HighScore = 0;
+    public static bool AutoStartNextRun = false;
 
     public static void Clear()
     {

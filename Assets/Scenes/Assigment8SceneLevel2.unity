@@ -543,7 +543,7 @@ MonoBehaviour:
   Primary: {fileID: -9204084159975536413, guid: 8e2c4b2bd569f4b10a51b5f7f2d9afec, type: 3}
   Secondary: {fileID: -6400664963847635226, guid: 8e2c4b2bd569f4b10a51b5f7f2d9afec, type: 3}
   Move: {fileID: -6507921163209808389, guid: 8e2c4b2bd569f4b10a51b5f7f2d9afec, type: 3}
-  moveSpeed: 0.02
+  moveSpeed: 5
   BulletPrefab: {fileID: 1009163644816500380, guid: 0d40206fc164a4010a0249b9049a6219, type: 3}
   BeamPrefab: {fileID: 6750380988671691052, guid: c348720ccac8a4d31afbc7da38791f61, type: 3}
   primaryDelay: 0.25
@@ -966,7 +966,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TorpedoShipSpawner
   torpedoShipPrefabs:
   - {fileID: 1906374043378120, guid: 79eac1308df01c1459d5833c9cb6055c, type: 3}
-  baseSpawnInterval: 3
+  baseSpawnInterval: 2
   spawnZOffset: 0.2
 --- !u!4 &891458683
 Transform:

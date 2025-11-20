@@ -543,7 +543,7 @@ MonoBehaviour:
   Primary: {fileID: -9204084159975536413, guid: 8e2c4b2bd569f4b10a51b5f7f2d9afec, type: 3}
   Secondary: {fileID: -6400664963847635226, guid: 8e2c4b2bd569f4b10a51b5f7f2d9afec, type: 3}
   Move: {fileID: -6507921163209808389, guid: 8e2c4b2bd569f4b10a51b5f7f2d9afec, type: 3}
-  moveSpeed: 0.02
+  moveSpeed: 5
   BulletPrefab: {fileID: 1009163644816500380, guid: 0d40206fc164a4010a0249b9049a6219, type: 3}
   BeamPrefab: {fileID: 6750380988671691052, guid: c348720ccac8a4d31afbc7da38791f61, type: 3}
   primaryDelay: 0.25
@@ -898,6 +898,8 @@ MonoBehaviour:
   scorePerAsteroid: 10
   scoreIncreaseRate: 0.5
   scoreMultiplierPerSecond: 0.1
+  startDelaySeconds: 3
+  gameOverDisplaySeconds: 3
   gameUI: {fileID: 348500771}
 --- !u!4 &932653442
 Transform:

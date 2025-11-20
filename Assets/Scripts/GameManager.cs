@@ -109,6 +109,12 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         UpdateUI();
+
+        if (PlayerInfo.AutoStartNextRun)
+        {
+            PlayerInfo.AutoStartNextRun = false;
+            StartGame();
+        }
     }
 
     private void Update()
