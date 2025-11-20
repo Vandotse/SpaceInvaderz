@@ -6,5 +6,12 @@
         <ui:VisualElement name="Life-1" style="flex-grow: 1; position: absolute; right: 5px; bottom: 5px; width: 20px; height: 20px; background-image: url(&quot;project://database/Assets/minecraftheart.png?fileID=2800000&amp;guid=592e7e7c6861b48ce87494226c6d956a&amp;type=3#minecraftheart&quot;);" />
         <ui:VisualElement name="Life-2" style="flex-grow: 1; position: absolute; right: 30px; bottom: 5px; width: 20px; height: 20px; background-image: url(&quot;project://database/Assets/minecraftheart.png?fileID=2800000&amp;guid=592e7e7c6861b48ce87494226c6d956a&amp;type=3#minecraftheart&quot;);" />
         <ui:VisualElement name="Life-3" style="flex-grow: 1; position: absolute; right: 55px; bottom: 5px; width: 20px; height: 20px; background-image: url(&quot;project://database/Assets/minecraftheart.png?fileID=2800000&amp;guid=592e7e7c6861b48ce87494226c6d956a&amp;type=3#minecraftheart&quot;);" />
+        <ui:VisualElement name="StartOverlay" style="flex-grow: 1; top: 0; left: 0; right: 0; bottom: 0; justify-content: center; align-self: center; align-content: center;">
+            <ui:Button text="Start" name="StartButton" style="justify-content: center; align-self: center; align-content: center; align-items: center; top: auto; color: rgb(255, 240, 0); background-color: rgb(94, 89, 89);" />
+            <ui:Label text="High Score: 00000" name="HighScoreLabel" style="position: relative; align-items: center; justify-content: center; align-self: center; align-content: center; font-size: 20px; color: rgb(255, 250, 0); top: -100px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="GameOverBanner" style="flex-grow: 1; position: absolute; top: 20%; left: 0; right: 0; align-items: center; justify-content: center; align-content: center; align-self: center;">
+            <ui:Label text="GAME OVER" enabled="true" style="font-size: 40px; color: rgb(255, 0, 0); display: flex; visibility: visible;" />
+        </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

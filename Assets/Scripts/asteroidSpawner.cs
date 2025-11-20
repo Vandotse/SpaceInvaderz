@@ -17,14 +17,13 @@ public class asteroidSpawner : MonoBehaviour
 
     void Update()
     {
-        float currentSpawnInterval = baseSpawnInterval;
-        if (GameManager.Instance != null)
+        if (GameManager.Instance != null && !GameManager.Instance.CanSpawnTargets)
         {
-            currentSpawnInterval = GameManager.Instance.GetCurrentSpawnInterval();
+            return;
         }
 
         timer += Time.deltaTime;
-        if (timer < currentSpawnInterval) return;
+        if (timer < baseSpawnInterval) return;
         timer = 0f;
 
         if (asteroidPrefabs == null || asteroidPrefabs.Length == 0) return;
